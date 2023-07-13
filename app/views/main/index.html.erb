@@ -1,3 +1,18 @@
 <div class="d-flex align-items-center justify-content-center">
-<h1>Welcome to Scheduled Tweets</h1>
+  <h1>Welcome to Scheduled Tweets</h1>
 </div>
+
+<div class="container">
+  <% if flash.now[:notice].present? %>
+    <div class="alert alert-success" role="alert">
+      <%= flash.now[:notice] %>
+    </div>
+  <% end %>
+
+  <% if flash.now[:alert].present? %>
+    <div class="alert alert-danger" role="alert">
+      <%= flash.now[:alert] %>
+    </div>
+  <% end %>
+</div>
+
